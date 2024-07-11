@@ -7,8 +7,24 @@
 }
 
 .h-full {
-  height: 87vh !important;
+  height: 87.5vh !important;
 }
+.form-control {
+  font-size: unset;
+}
+.profile-img {
+  cursor: pointer;
+}
+
+.overflow-scroll {
+  overflow-y: scroll;
+  max-height: 300px; /* Example height; adjust as needed */
+}
+
+.chat-content {
+  display: block; /* Initially hidden, shown conditionally */
+}
+
 :root {
   --hue: 220;
   --primary-color: black;
