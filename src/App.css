@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+.h-full {
+  height: 87vh !important;
+}
 :root {
   --hue: 220;
   --primary-color: black;
@@ -20,12 +23,15 @@
   /* padrão 10px */
   --nav-heigth: 7.2rem;
 }
+.height {
+  height: 200px;
+}
 
 body {
   font-family: "DM Sans" !important;
   font-size: 1.6rem;
   text-align: center;
-  overflow: overlay;
+  /* overflow: hidden !important; */
   background-color: var(--bg-light);
 }
 h1,
@@ -65,7 +71,7 @@ ul {
   padding-inline: 2.4rem;
 }
 
-section {
+.main section {
   padding-block: 10rem;
 }
 
@@ -516,7 +522,7 @@ footer .social-links-footer {
     display: grid;
   }
 
-  section {
+  .main section {
     padding-block: 16rem;
   }
 
@@ -865,4 +871,9 @@ footer .social-links-footer {
 
 .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.chat-option img {
+  width: 50px;
+  height: 50px;
 }

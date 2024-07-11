@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 
 function App() {
   return (
-    <>
+    <div className="main">
       <Header />
       <section id="home">
         <div className="wrapper">
@@ -391,7 +391,7 @@ function App() {
           />
         </svg>
       </Link>
-    </>
+    </div>
   );
 }
 
