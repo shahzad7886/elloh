@@ -378,7 +378,7 @@ const ChatSection = () => {
                       src="/images/Refi.png"
                       alt="Refi"
                       description="i am looking to refinance a property..."
-                      onClick={() => handleProfileClick("Refi")}
+                      onClick={() => handleProfileClick("refinance")}
                     />
                     <ProfileImage
                       src="/images/RefID.png"
@@ -398,50 +398,34 @@ const ChatSection = () => {
                     {activeChat === "borrower" ? (
                       <ChatContent>
                         {" "}
-                        <h4> this is {activeChat} chat</h4>
+                        this is <b className="text-danger">{activeChat}</b> chat
                       </ChatContent>
                     ) : activeChat === "Broker" ? (
                       <ChatContent>
                         {" "}
-                        <h4> this is {activeChat} chat</h4>
+                        this is <b className="text-danger">{activeChat}</b> chat
                       </ChatContent>
                     ) : activeChat === "Purchase" ? (
                       <ChatContent>
                         {" "}
-                        <h4> this is {activeChat} chat</h4>
+                        this is <b className="text-danger">{activeChat}</b> chat
                       </ChatContent>
-                    ) : activeChat === "Refi" ? (
+                    ) : activeChat === "refinance" ? (
                       <ChatContent>
                         {" "}
-                        <h4> this is {activeChat} chat</h4>
+                        this is <b className="text-danger">{activeChat}</b> chat
                       </ChatContent>
                     ) : activeChat === "ReferenceId" ? (
                       <ChatContent>
                         {" "}
-                        <h4> this is {activeChat} chat</h4>
+                        this is <b className="text-danger">{activeChat}</b> chat
                       </ChatContent>
                     ) : activeChat === "LiveAgent" ? (
                       <ChatContent>
                         {" "}
-                        <h4> this is {activeChat} chat</h4>
+                        this is <b className="text-danger">{activeChat}</b> chat
                       </ChatContent>
                     ) : null}
-                  </div>
-                  <div className="input-group mt-5">
-                    <input
-                      type="text"
-                      class="S p-4"
-                      placeholder="Find the help you need here..."
-                      aria-label="Recipient's username"
-                      aria-describedby="button-addon2"
-                    />
-                    <button
-                      class="btn btn-outline-secondary"
-                      type="button"
-                      id="button-addon2"
-                    >
-                      <i class="bi bi-send-fill fs-3"></i>
-                    </button>
                   </div>
                 </div>
               </div>
@@ -466,7 +450,7 @@ const ProfileImage = ({ src, alt, description, onClick }) => {
 const ChatContent = ({ children }) => {
   return (
     <div className="chat-content">
-      {children}
+      <h3> {children}</h3>
 
       <div className="overflow-scroll height">
         <div class="d-flex justify-content-end align-items-center mb-4 ">
@@ -507,6 +491,22 @@ const ChatContent = ({ children }) => {
       </div>
 
       <hr />
+      <div className="input-group mt-5">
+        <input
+          type="text"
+          class="w-full p-4"
+          placeholder="Find the help you need here..."
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          <i class="bi bi-send-fill py-5 fs-3"></i>
+        </button>
+      </div>
     </div>
   );
 };
